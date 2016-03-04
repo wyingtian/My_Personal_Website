@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neighborhood Map</title>
+    <link href="neigh_map_files/css/bootstrap.min.css" rel="stylesheet">
+    <link href="neigh_map_files/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="col-lg-3 col-md-3 col-xs-3" id="map"></section>
+<aside class="col-lg-9 col-md-9 col-xs-9" id="search-group">
+    <div class="input-group">
+        <!--filter result based on input-->
+        <p><input data-bind="value: filter, valueUpdate: 'afterkeydown'" class="form-control" id="search-bar" type="text"
+                  placeholder="Search "/></p>
+    </div>
+        <!--list all filtered result-->
+    <div data-bind="foreach:searchedItem" id="list-places" class="list-group">
+        <button data-bind="text: name , click: $root.clickAction" id="list-place" type="button"
+                class="list-group-item"></button>
+    </div>
+
+</aside>
+
+<!-- yelp oauth api request -->
+<script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+<script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="neigh_map_files/js/knockout.js"></script>
+<script src="neigh_map_files/js/app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAINgjWN_2R6K0LdjtxwhqZCTCS9QPHP1k&libraries=places&callback=initMap"
+      onerror="googleError()"  async defer></script>
+</body>
+</html>

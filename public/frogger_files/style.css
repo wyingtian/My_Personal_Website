@@ -1,0 +1,57 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #747704;
+    font-weight: 300;
+    background-color: #F5F3EE;
+}
+
+.thicker {
+    border: 0;
+    height: 4px;
+    background-color: #BCBBBB;
+}
+
+.text-muted {
+    color: #BCBBBB;
+}
+
+.link-demo {
+    color: #747704;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.link-github {
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.text-thin {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+h2.margin {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.my-picture {
+    width:75%;
+    height:75%;
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    border: 2px solid white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
